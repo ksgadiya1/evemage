@@ -24,7 +24,7 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
-    --radius: 0.5rem;
+    --radius: 1rem;
   }
 
   .dark {
@@ -49,8 +49,6 @@
     --ring: 224.3 76.3% 48%;
   }
 }
-
-
 * {
   list-style: none;
   padding: 0;
@@ -191,15 +189,15 @@ body {
 
   /* SHADCN OVERRIDES */
   .select-field {
-    @apply w-full bg-grey-50 h-[54px] placeholder:text-grey-500 rounded-full p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent focus:ring-transparent !important;
+    @apply w-full bg-gray-50 h-[54px] placeholder:text-gray-500 rounded-full p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent focus:ring-transparent !important;
   }
 
   .input-field {
-    @apply bg-grey-50 h-[54px] focus-visible:ring-offset-0 placeholder:text-grey-500 rounded-full p-regular-16 px-4 py-3 border-none focus-visible:ring-transparent !important;
+    @apply bg-gray-50 h-[54px] focus-visible:ring-offset-0 placeholder:text-gray-500 rounded-full p-regular-16 px-4 py-3 border-none focus-visible:ring-transparent !important;
   }
 
   .textarea {
-    @apply bg-grey-50 flex flex-1 placeholder:text-grey-500 p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent !important;
+    @apply bg-gray-50 flex flex-1 placeholder:text-gray-500 p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent !important;
   }
 
   .button {
@@ -207,7 +205,7 @@ body {
   }
 
   .select-item {
-    @apply py-3 cursor-pointer  focus:bg-primary-50;
+    @apply py-3 cursor-pointer focus:bg-violet-50;
   }
 
   .toggle-switch {
