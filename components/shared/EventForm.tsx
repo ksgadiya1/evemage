@@ -149,16 +149,18 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
               name="imageUrl"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormControl className="h-72">
+                  <FormControl className="h-72 bg-gray-50">
                     <FileUploader 
                       onFieldChange={field.onChange}
                       imageUrl={field.value}
                       setFiles={setFiles}
+                    
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
+              
             />
         </div>
 
@@ -260,8 +262,8 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                   <FormControl>
                     <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-gray-50 px-4 py-2">
                       <Image
-                        src="/assets/icons/dollar.svg"
-                        alt="dollar"
+                        src="/assets/icons/rupee.svg"
+                        alt="rupee"
                         width={24}
                         height={24}
                         className="filter-grey"
