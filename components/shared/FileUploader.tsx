@@ -1,4 +1,4 @@
-'use client'
+
 
 import { useCallback, Dispatch, SetStateAction } from 'react'
 import type { FileWithPath } from '@uploadthing/react'
@@ -11,11 +11,11 @@ import { convertFileToUrl } from '@/lib/utils'
 type FileUploaderProps = {
   onFieldChange: (url: string) => void
   imageUrl: string
-  setFiles: Dispatch<SetStateAction<File[]>>
+  setFiles: Dispatch<SetStateAction<FileWithPath[]>>
 }
 
 export function FileUploader({ imageUrl, onFieldChange, setFiles }: FileUploaderProps) {
-  const onDrop = useCallback((acceptedFiles: FileWithPath[]) => {
+  const onDrop = useCallback((acceptedFiles: File[]) => {
     setFiles(acceptedFiles)
     onFieldChange(convertFileToUrl(acceptedFiles[0]))
   }, [])
