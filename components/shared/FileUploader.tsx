@@ -1,6 +1,7 @@
-
+// 'use client'
 import { useCallback, Dispatch, SetStateAction } from 'react'
-import type { File } from '@uploadthing/react'
+// import type { FileWithPath } from '@uploadthing/react'
+import { FileWithPath } from 'react-dropzone';
 import { useDropzone } from '@uploadthing/react/hooks'
 import { generateClientDropzoneAccept } from 'uploadthing/client'
 
@@ -14,7 +15,7 @@ type FileUploaderProps = {
 }
 
 export function FileUploader({ imageUrl, onFieldChange, setFiles }: FileUploaderProps) {
-  const onDrop = useCallback((acceptedFiles: File[]) => {
+  const onDrop = useCallback((acceptedFiles: FileWithPath[]) => {
     setFiles(acceptedFiles)
     onFieldChange(convertFileToUrl(acceptedFiles[0]))
   }, [])
@@ -41,7 +42,7 @@ export function FileUploader({ imageUrl, onFieldChange, setFiles }: FileUploader
           />
         </div>
       ) : (
-        <div className="flex-center flex-col py-5 text-grey-500">
+        <div className="flex-center flex-col py-5 text-gray-500">
           <img src="/assets/icons/upload.svg" width={77} height={77} alt="file upload" />
           <h3 className="mb-2 mt-2">Drag photo here</h3>
           <p className="p-medium-12 mb-4">SVG, PNG, JPG</p>
@@ -53,4 +54,3 @@ export function FileUploader({ imageUrl, onFieldChange, setFiles }: FileUploader
     </div>
   )
 }
-export default FileUploader
